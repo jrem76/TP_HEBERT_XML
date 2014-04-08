@@ -32,4 +32,8 @@ public class ResumeManager {
     public void setListResume(List<Resume> listResume) {
         this.listResume = listResume;
     }
+
+    public Resume get(int index) {
+        return listResume.get(index);
+    }
 }
