@@ -6,20 +6,20 @@ import java.util.List;
  * Created by Jérémy Notebook on 08/04/14.
  */
 public class Competences_Info {
-    private List<Competence> competenceList;
+    private List<Competence> competences;
 
     public Competences_Info(List<Competence> competenceList) {
-        this.competenceList = competenceList;
+        this.competences = competenceList;
     }
 
     public Competences_Info() {
     }
 
-    public List<Competence> getCompetenceList() {
-        return competenceList;
+    public List<Competence> getCompetences() {
+        return competences;
     }
 
-    public void setCompetenceList(List<Competence> competenceList) {
-        this.competenceList = competenceList;
+    public void setCompetences(List<Competence> competenceList) {
+        this.competences = competenceList;
     }
 }

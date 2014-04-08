@@ -23,6 +23,8 @@ public class XMLController {
     @RequestMapping(method = RequestMethod.GET)
     public @ResponseBody ResumeManager getResumeInXML() {
         Resume resume = new Resume();
+        resume.setFirstName("Jérémy");
+        resume.setLastName("Hébert");
         List<Competence> list = new ArrayList<Competence>();
         list.add(new Competence("java", "bonne"));
         list.add(new Competence("php", "bonne"));
@@ -32,8 +34,7 @@ public class XMLController {
         listExp.add(new Entreprise("Ectaris", "2012", "analyste programmeur"));
         listExp.add(new Entreprise("Renault", "2013", "analyste programmeur"));
         resume.setExperiences(new Experiences(listExp));
-        resume.setFirstName("Jérémy");
-        resume.setLastName("Hébert");
+
         rm.add(resume);
         return rm;
     }
