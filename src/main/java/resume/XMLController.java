@@ -32,7 +32,8 @@ public class XMLController {
         listExp.add(new Entreprise("Ectaris", "2012", "analyste programmeur"));
         listExp.add(new Entreprise("Renault", "2013", "analyste programmeur"));
         resume.setExperiences(new Experiences(listExp));
-
+        resume.setFirstName("Jérémy");
+        resume.setLastName("Hébert");
         rm.add(resume);
         return rm;
     }
