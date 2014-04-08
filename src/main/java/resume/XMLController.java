@@ -15,7 +15,7 @@ import java.util.List;
 @Controller
 @RequestMapping("/resume")
 public class XMLController {
-    private static ResumeManager rm;
+    private static ResumeManager rm = new ResumeManager();
     @RequestMapping(value="{lastName}", method = RequestMethod.GET)
     public @ResponseBody Resume getResumeInXML(@PathVariable int index) {
        return rm.get(index);
