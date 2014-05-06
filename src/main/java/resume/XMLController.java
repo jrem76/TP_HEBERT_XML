@@ -1,10 +1,7 @@
 package resume;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -54,7 +51,7 @@ public class XMLController {
     }
 
     @RequestMapping(method=RequestMethod.PUT)
-    public @ResponseBody ResumeManager add(@PathVariable Resume resume) {
+    public @ResponseBody ResumeManager add(@RequestBody Resume resume) {
         rm.add(resume);
         return rm;
     }
