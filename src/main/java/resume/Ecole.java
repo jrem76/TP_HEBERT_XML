@@ -13,9 +13,7 @@ public class Ecole {
     private String date;
     private String ville;
 
-    public Ecole() {
-
-    }
+    public Ecole() {}
 
     public Ecole(String nom, String diplome, String date, String ville) {
         this.date = date;

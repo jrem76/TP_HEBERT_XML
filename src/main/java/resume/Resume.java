@@ -37,7 +37,13 @@ public class Resume {
     }
 
     public Resume() {
-
+        this.objectif = "";
+        this.lastName = "";
+        this.firstName = "";
+        this.experiences = new Experiences();
+        this.langues = new Langues();
+        this.competences_info = new Competences_Info();
+        this.scolarite = new Scolarite();
     }
 
     public int getId() { return id; }
@@ -64,6 +70,7 @@ public class Resume {
         return experiences;
     }
 
+    @XmlElement
     public void setExperiences(Experiences experiences) {
         this.experiences = experiences;
     }
@@ -72,6 +79,7 @@ public class Resume {
         return langues;
     }
 
+    @XmlElement
     public void setLangues(Langues langues) {
         this.langues = langues;
     }
@@ -80,6 +88,7 @@ public class Resume {
         return competences_info;
     }
 
+    @XmlElement
     public void setCompetences_info(Competences_Info competences_info) {
         this.competences_info = competences_info;
     }
@@ -88,10 +97,11 @@ public class Resume {
         return scolarite;
     }
 
+    @XmlElement
     public void setScolarite(Scolarite scolarite) {
         this.scolarite = scolarite;
     }
-
+    @XmlElement
     public void setId(int id) {     this.id = id;   }
 
 }
