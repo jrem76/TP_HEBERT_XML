@@ -8,7 +8,7 @@ import javax.xml.bind.annotation.XmlType;
  * Created by Jérémy Notebook on 01/04/14.
  */
 @XmlRootElement (name = "resume")
-@XmlType(propOrder = {"firstname","lastname", "competences_info", "scolarite", "experiences", "langues"})
+@XmlType(propOrder = {"firstName","lastName", "competences_info", "scolarite", "experiences", "langues"})
 public class Resume {
 
     private int id;
