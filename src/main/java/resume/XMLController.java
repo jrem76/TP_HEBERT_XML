@@ -53,8 +53,7 @@ public class XMLController {
     }
 
     @RequestMapping(method=RequestMethod.PUT)
-    public @ResponseBody ResumeManager add(@RequestBody Resume resume) {
+    public @ResponseBody void add(@RequestBody Resume resume) {
         rm.add(resume);
-        return rm;
     }
 }
