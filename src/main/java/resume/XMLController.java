@@ -31,6 +31,10 @@ public class XMLController {
         listExp.add(new Entreprise("Renault", "2013", "analyste programmeur"));
         resume.setExperiences(new Experiences(listExp));
 
+        List<Langue> langues = new ArrayList<Langue>();
+        langues.add(new Langue("anglais", "bon"));
+        resume.setLangues(new Langues(langues));
+
         rm.add(resume);
     }
     @RequestMapping(value="{lastName}", method = RequestMethod.GET)
