@@ -16,12 +16,8 @@ import java.util.List;
 @RequestMapping("/resume")
 public class XMLController {
     private static ResumeManager rm = new ResumeManager();
-    @RequestMapping(value="{lastName}", method = RequestMethod.GET)
-    public @ResponseBody Resume getResumeInXML(@PathVariable int index) {
-       return rm.get(index);
-    }
-    @RequestMapping(method = RequestMethod.GET)
-    public @ResponseBody ResumeManager getResumeInXML() {
+
+    {
         Resume resume = new Resume();
         resume.setFirstName("Jérémy");
         resume.setLastName("Hébert");
@@ -36,6 +32,16 @@ public class XMLController {
         resume.setExperiences(new Experiences(listExp));
 
         rm.add(resume);
+    }
+    @RequestMapping(value="{lastName}", method = RequestMethod.GET)
+    public @ResponseBody Resume getResumeInXML(@PathVariable int index) {
+       return rm.get(index);
+    }
+
+
+    @RequestMapping(method = RequestMethod.GET)
+    public @ResponseBody ResumeManager getResumeInXML() {
+
         return rm;
     }
 
