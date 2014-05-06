@@ -42,8 +42,8 @@ public class XMLController {
         rm.add(resume);
     }
     @RequestMapping(value="{id}", method = RequestMethod.GET)
-    public @ResponseBody Resume getResume(@PathVariable int index) {
-       return rm.get(index);
+    public @ResponseBody Resume getResume(@PathVariable int id) {
+       return rm.get(id);
     }
 
 
