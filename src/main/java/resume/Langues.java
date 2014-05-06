@@ -1,5 +1,6 @@
 package resume;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -12,11 +13,18 @@ public class Langues {
         this.langueList = langueList;
     }
 
-    public List<Langue> getLangueList() {
+    public Langues() {
+		langueList = new ArrayList<Langue>();
+	}
+
+	public List<Langue> getLangueList() {
         return langueList;
     }
 
     public void setLangueList(List<Langue> langueList) {
         this.langueList = langueList;
+    }
+    public void add(Langue l) {
+    	langueList.add(l);
     }
 }

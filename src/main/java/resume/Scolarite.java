@@ -1,5 +1,6 @@
 package resume;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -11,7 +12,9 @@ public class Scolarite {
     public Scolarite(List<Ecole> listEcole) {
         this.listEcole = listEcole;
     }
-    public Scolarite() {}
+    public Scolarite() {
+    	listEcole = new ArrayList<Ecole>();
+    }
 
     public List<Ecole> getListEcole() {
         return listEcole;
@@ -19,5 +22,9 @@ public class Scolarite {
 
     public void setListEcole(List<Ecole> listEcole) {
         this.listEcole = listEcole;
+    }
+    
+    public void add(Ecole e) {
+    	listEcole.add(e);
     }
 }

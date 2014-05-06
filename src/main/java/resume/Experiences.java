@@ -1,5 +1,7 @@
 package resume;
 
+
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -13,6 +15,7 @@ public class Experiences {
     }
 
     public Experiences() {
+    	listExp = new ArrayList<Entreprise>();
     }
 
     public List<Entreprise> getListExp() {
@@ -22,4 +25,9 @@ public class Experiences {
     public void setListExp(List<Entreprise> listExp) {
         this.listExp = listExp;
     }
+
+	public void add(Entreprise entreprise) {
+		listExp.add(entreprise);
+		
+	}
 }

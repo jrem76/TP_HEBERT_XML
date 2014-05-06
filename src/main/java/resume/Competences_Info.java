@@ -1,5 +1,6 @@
 package resume;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -13,6 +14,7 @@ public class Competences_Info {
     }
 
     public Competences_Info() {
+    	competences = new ArrayList<Competence>();
     }
 
     public List<Competence> getCompetences() {
@@ -22,4 +24,9 @@ public class Competences_Info {
     public void setCompetences(List<Competence> competenceList) {
         this.competences = competenceList;
     }
+    
+    public void add(Competence c) {
+    	competences.add(c);
+    }
+
 }
