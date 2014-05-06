@@ -35,6 +35,9 @@ public class XMLController {
         langues.add(new Langue("anglais", "bon"));
         resume.setLangues(new Langues(langues));
 
+        List<Ecole> ecoles = new ArrayList<Ecole>();
+        ecoles.add(new Ecole("Lycée Coubertin", "Bac", "Bolbec", "2010"));
+        resume.setScolarite(new Scolarite(ecoles));
         rm.add(resume);
     }
     @RequestMapping(value="{lastName}", method = RequestMethod.GET)
