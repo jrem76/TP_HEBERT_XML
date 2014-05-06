@@ -14,9 +14,11 @@ public class Competence {
         this.niveau = niveau;
     }
 
+    public Competence() { }
     public String getNom() {
         return nom;
     }
+
     @XmlElement
     public void setNom(String nom) {
         this.nom = nom;
@@ -25,6 +27,7 @@ public class Competence {
     public String getNiveau() {
         return niveau;
     }
+
     @XmlElement
     public void setNiveau(String niveau) {
         this.niveau = niveau;
