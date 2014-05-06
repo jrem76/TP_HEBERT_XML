@@ -14,6 +14,9 @@ public class Langue {
         this.niveau = niveau;
     }
 
+    public Langue() {
+    }
+
     public String getNom() {
         return nom;
     }
