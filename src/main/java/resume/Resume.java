@@ -2,22 +2,31 @@ package resume;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Created by Jérémy Notebook on 01/04/14.
  */
 @XmlRootElement (name = "resume")
+@XmlType(propOrder = {"firstname","lastname", "experiences", "langues"})
 public class Resume {
 
+    private int id;
     private String objectif;
     private String lastName;
     private String firstName;
     private Experiences experiences;
     private Langues langues;
+
+
+
     private Competences_Info competences_info;
     private Scolarite scolarite;
 
+
+
     public Resume(String objectif, String lastName, String firstName, Experiences experiences, Langues langues, Competences_Info competences_info, Scolarite scolarite) {
+
         this.objectif = objectif;
         this.lastName = lastName;
         this.firstName = firstName;
@@ -30,6 +39,8 @@ public class Resume {
     public Resume() {
 
     }
+
+    public int getId() { return id; }
 
     @XmlElement
     public void setLastName(String lastName) {
@@ -80,5 +91,7 @@ public class Resume {
     public void setScolarite(Scolarite scolarite) {
         this.scolarite = scolarite;
     }
+
+    public void setId(int id) {     this.id = id;   }
 
 }
