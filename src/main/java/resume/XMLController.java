@@ -41,7 +41,7 @@ public class XMLController {
 
         rm.add(resume);
     }
-    @RequestMapping(value="{lastName}", method = RequestMethod.GET)
+    @RequestMapping(value="{id}", method = RequestMethod.GET)
     public @ResponseBody Resume getResumeInXML(@PathVariable int index) {
        return rm.get(index);
     }
