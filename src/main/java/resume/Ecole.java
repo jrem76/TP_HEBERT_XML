@@ -1,10 +1,12 @@
 package resume;
 
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * Created by Jérémy Notebook on 08/04/14.
  */
+@XmlType(propOrder = {"nom","diplome", "date", "ville"})
 public class Ecole {
     private String nom;
     private String diplome;
