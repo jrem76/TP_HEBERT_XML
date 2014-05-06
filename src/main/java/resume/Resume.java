@@ -26,7 +26,6 @@ public class Resume {
 
 
     public Resume(String objectif, String lastName, String firstName, Experiences experiences, Langues langues, Competences_Info competences_info, Scolarite scolarite) {
-
         this.objectif = objectif;
         this.lastName = lastName;
         this.firstName = firstName;
