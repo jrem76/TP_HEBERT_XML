@@ -8,14 +8,18 @@ import javax.xml.bind.annotation.XmlType;
  * Created by Jérémy Notebook on 01/04/14.
  */
 @XmlRootElement (name = "resume")
-@XmlType(propOrder = {"firstName","lastName", "competences_info", "scolarite", "experiences", "langues"})
+@XmlType(propOrder = {"id", "firstName","lastName", "competences_info", "scolarite", "experiences", "langues"})
 public class Resume {
 
+    private int id;
     private String objectif;
     private String lastName;
     private String firstName;
     private Experiences experiences;
     private Langues langues;
+
+
+
     private Competences_Info competences_info;
     private Scolarite scolarite;
 
@@ -41,6 +45,7 @@ public class Resume {
         this.scolarite = new Scolarite();
     }
 
+    public int getId() { return id; }
 
     @XmlElement
     public void setLastName(String lastName) {
@@ -95,6 +100,7 @@ public class Resume {
     public void setScolarite(Scolarite scolarite) {
         this.scolarite = scolarite;
     }
-
+    @XmlElement
+    public void setId(int id) {     this.id = id;   }
 
 }

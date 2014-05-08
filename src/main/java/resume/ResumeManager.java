@@ -19,7 +19,7 @@ public class ResumeManager {
 
     public void add(Resume resume) {
         resume.setId(listResume.size());
-        this.listResume.add(resume);
+        listResume.add(resume);
     }
 
     public void del(Resume resume) {
