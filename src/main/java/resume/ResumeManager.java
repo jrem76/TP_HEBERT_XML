@@ -18,7 +18,7 @@ public class ResumeManager {
     }
 
     public void add(Resume resume) {
-        resume.setId(listResume.size());
+        resume.setId(listResume.size() + 1);
         this.listResume.add(resume);
     }
 
