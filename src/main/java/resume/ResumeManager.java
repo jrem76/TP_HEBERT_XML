@@ -35,6 +35,8 @@ public class ResumeManager {
     }
 
     public Resume get(int index) {
+        if (index >= listResume.size()) return new Resume();
+        
         return listResume.get(index);
     }
 }
